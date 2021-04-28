@@ -10,7 +10,7 @@
     "devextreme": "20.2.6",
     "devextreme-react": "20.2.6",
     "eslint-plugin-react": "7.23.2",
-    "firebase": "6.3.4",
+    "firebase": "8.4.2",
     "grpc": "1.24.7",
     "html-react-parser": "1.2.4",
     "lodash": "4.17.15",
@@ -29,7 +29,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "CI=false && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
