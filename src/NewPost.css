@@ -1,0 +1,10 @@
+.dx-htmleditor-content img {
+  vertical-align: middle;
+  padding-right: 10px;
+}
+
+.options {
+  padding: 20px;
+  background-color: rgba(22, 156, 245, 0.767);
+  margin-top: 20px;
+}

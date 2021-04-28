@@ -1,0 +1,42 @@
+{
+  "name": "e-learning-saystem",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "main": "./src/index.js",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "4.22.0",
+    "@typescript-eslint/parser": "4.22.0",
+    "devextreme": "20.2.6",
+    "devextreme-react": "20.2.6",
+    "eslint-plugin-react": "7.23.2",
+    "firebase": "6.3.4",
+    "grpc": "1.24.7",
+    "html-react-parser": "1.2.4",
+    "lodash": "4.17.15",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "react-redux": "7.2.3",
+    "react-router-dom": "5.0.1",
+    "react-scripts": "3.0.1",
+    "redux": "4.0.5",
+    "redux-logger": "3.0.6",
+    "reselect": "4.0.0",
+    "uiw": "4.7.12"
+  },
+  "devDependencies": {
+    "typescript": "3.3.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
