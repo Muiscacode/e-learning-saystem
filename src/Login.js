@@ -27,7 +27,10 @@ class Login extends Component {
       });
       this.props.history.push("/");
     } catch (error) {
-      console.log(error.message);
+      alert(error.message);
+      this.setState({
+        password: ""
+      });
     }
   };
 

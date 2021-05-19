@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import Comment from "./Components/Comment";
 import Category from "./Components/Category";
 import "./Post.css";
@@ -54,6 +55,17 @@ class Post extends Component {
       ref.child(id).remove();
     }
   };
+  handleDeletePost = () => {
+    if (window.confirm("Eliminar Post")) {
+      const refPost = db.ref("posts/" + this.state.id);
+      refPost.remove();
+      this.props.history.push("/");
+    }
+  };
+  handleEditPost = (id) => {
+    //const ref = db.ref("comments/" + this.state.id);
+    //ref.child(id).remove();
+  };
 
   render() {
     const { post, click, comments } = this.state;
@@ -70,13 +82,49 @@ class Post extends Component {
                     <p className="mb-5 m-0 p-0">
                       <small className="text-muted h6">{post.date}</small>
                     </p>
-                  </div>
-                  <div>
                     <h5 className="mt-2">
                       <span className="badge badge-primary">
                         {post.category}
                       </span>
                     </h5>
+                  </div>
+                  <div>
+                    {this.state.currentRol === "Impulsor" ? (
+                      <div className="d-grid gap-2 d-md-block">
+                        <button
+                          className="btn btn-secondary mt-2 btn-sm"
+                          onClick={this.handleDeletePost.bind(this)}
+                        >
+                          Eliminar
+                        </button>
+                      </div>
+                    ) : (
+                      <div></div>
+                    )}
+                    {this.state.currentRol === "Impulsor" ? (
+                      <Link
+                        to={{
+                          pathname: "/EditPost",
+                          state: {
+                            id: post.id,
+                            title: post.title,
+                            content: post.content,
+                            category: post.category
+                          }
+                        }}
+                      >
+                        <div className="d-grid gap-2 d-md-block">
+                          <button
+                            className="btn btn-secondary mt-2 btn-sm"
+                            onClick={this.handleEditPost.bind(this)}
+                          >
+                            Editar
+                          </button>
+                        </div>
+                      </Link>
+                    ) : (
+                      <span></span>
+                    )}
                   </div>
                 </div>
               </div>

@@ -25,13 +25,14 @@ const fontValues = [
   "Verdana"
 ];
 
-class NewPost extends Component {
+class EditPost extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: "",
-      content: "",
-      category: "",
+      id: props.location.state.id,
+      title: props.location.state.title,
+      valueContent: props.location.state.content,
+      category: props.location.state.category,
       url: "",
       arquivo: null,
       progress: 0,
@@ -67,13 +68,7 @@ class NewPost extends Component {
     e.preventDefault();
 
     let timestamp = new Date();
-    let id =
-      timestamp.getMonth().toString() +
-      timestamp.getDay().toString() +
-      timestamp.getHours().toString() +
-      timestamp.getMinutes().toString() +
-      timestamp.getSeconds().toString() +
-      timestamp.getMilliseconds().toString();
+    let id = this.state.id;
 
     const ref = db.ref("posts/" + id);
     let date = `${timestamp.toLocaleDateString()}, ${timestamp.toLocaleTimeString()}`;
@@ -220,4 +215,4 @@ class NewPost extends Component {
   }
 }
 
-export default NewPost;
+export default EditPost;

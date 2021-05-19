@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import NewPost from "./NewPost";
+import EditPost from "./EditPost";
 import Nav from "./Components/Nav";
 import Jumbo from "./Components/Jumbo";
 import Footer from "./Components/Footer";
@@ -32,6 +33,7 @@ ReactDOM.render(
       <Switch>
         <Route path="/" exact component={App} />
         <Route path="/NewPost" component={NewPost} />
+        <Route path="/EditPost" component={EditPost} />
         <Route path="/Login" component={Login} />
         <Route path="/Register" component={Register} />
         <Route path="/Post" component={Post} />
