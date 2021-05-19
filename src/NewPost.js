@@ -188,7 +188,6 @@ class NewPost extends Component {
                   </Toolbar>
                 </HtmlEditor>
               </div>
-              <div className="value-content">{valueContent}</div>
             </div>
 
             {!this.state.url.length && this.state.arquivo && (
