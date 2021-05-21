@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const categorias = [
-  "Diseño",
+  "Diseno",
   "Arte",
-  "Programación",
+  "Programacion",
   "Lore",
   "Saberes Ancestrales"
 ];

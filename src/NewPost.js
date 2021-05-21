@@ -130,10 +130,10 @@ class NewPost extends Component {
                   onChange={this.handleChange}
                 >
                   <option defaultValue="Escoger">Escoger</option>
-                  <option value="Diseño">Diseño</option>
+                  <option value="Diseno">Diseño</option>
                   <option value="Arte">Arte</option>
                   <option value="Lore">Lore</option>
-                  <option value="Programación">Programación</option>
+                  <option value="Programacion">Programación</option>
                   <option value="Saberes Ancestrales">
                     Saberes Ancestrales
                   </option>

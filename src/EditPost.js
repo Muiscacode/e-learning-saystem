@@ -128,7 +128,7 @@ class EditPost extends Component {
                   <option value="Diseño">Diseño</option>
                   <option value="Arte">Arte</option>
                   <option value="Lore">Lore</option>
-                  <option value="Programación">Programación</option>
+                  <option value="Programacion">Programación</option>
                   <option value="Saberes Ancestrales">
                     Saberes Ancestrales
                   </option>
