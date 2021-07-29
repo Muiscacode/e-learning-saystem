@@ -18,11 +18,11 @@ import { Provider } from "react-redux";
 import store from "./redux/store";
 
 const categorias = [
-  "Diseño",
-  "Arte",
-  "Programacion",
-  "Lore",
-  "Saberes Ancestrales"
+  "Boyaca",
+  "Meta",
+  "Tolima",
+  "Otros",
+  "Ciencia y tecnologia"
 ];
 
 ReactDOM.render(

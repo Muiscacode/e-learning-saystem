@@ -3,6 +3,8 @@ import { auth, createUserProfileDatabase } from "./config";
 
 import "./sign.css";
 
+const superRol = "expediciones";
+
 class Register extends React.Component {
   constructor(props) {
     super(props);
@@ -130,7 +132,7 @@ class Register extends React.Component {
                 >
                   <option defaultValue="Rol"> </option>
                   <option value="Agente">Agente</option>
-                  {this.state.company === "saystem" ? (
+                  {this.state.company === superRol ? (
                     <option value="Impulsor">Impulsor</option>
                   ) : (
                     ""
